@@ -9,6 +9,5 @@ def push(ui, repo, **kwargs):
 
 		s3_proc = subprocess.call('make s3_upload', shell=True, cwd='/users/Jeff/blog/')
 		hg_proc = subprocess.call('hg push main', shell=True)
-		gh_proc = subprocess.call('hg push mirror')
 	except:
 		print 'No internet, so not pushing to the servers'
