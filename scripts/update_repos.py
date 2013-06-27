@@ -11,4 +11,3 @@ def push(ui, repo, **kwargs):
 		gh_proc = subprocess.call('hg push mirror')
 	except:
 		print 'No internet, so not pushing to the servers'
-
