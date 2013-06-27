@@ -7,7 +7,6 @@ def push(ui, repo, **kwargs):
 	try:
 		response = urllib2.urlopen('http://opendns.com', timeout=1)
 
-		s3_proc = subprocess.call('make s3_upload', shell=True, cwd='/users/Jeff/blog/')
 		hg_proc = subprocess.call('hg push main', shell=True)
 		gh_proc = subprocess.call('hg push mirror')
 	except:
